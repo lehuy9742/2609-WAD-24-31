@@ -1,7 +1,5 @@
 # PROPOSAL — CampusJob Trust
 
-*English version of [`PROPOSAL.md`](PROPOSAL.md). The wireframes are in Vietnamese, so on-screen labels are quoted in Vietnamese with an English gloss.*
-
 ## 1. Team
 
 | #   | Full name         | Student ID |
