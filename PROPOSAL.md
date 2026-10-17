@@ -4,9 +4,9 @@
 
 | STT | Họ và tên đầy đủ | MSSV | Vai trò |
 |-----|------------------|------|---------|
-| 1 | _(điền họ tên đầy đủ)_ | _(điền MSSV)_ | _(ví dụ: Frontend)_ |
-| 2 | _(điền họ tên đầy đủ)_ | _(điền MSSV)_ | _(ví dụ: Backend)_ |
-| 3 | _(điền họ tên đầy đủ)_ | _(điền MSSV)_ | _(ví dụ: Dữ liệu)_ |
+| 1 | _Lê Nguyễn Gia Huy_ | _24120061_ | _ _ |
+| 2 | _Lê Hoàng Hiếu_ | _24120048_| _ _ |
+| 3 | _Nguyễn Anh Sang_ | _241200131_ | _ _ |
 
 ## 2. The problem
 
