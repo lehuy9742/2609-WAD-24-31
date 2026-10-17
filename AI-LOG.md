@@ -22,4 +22,3 @@ Rejected: its first suggestion, which was to remove the save-job buttons, accoun
 Tool: Claude Code.  
 Asked for: a draft of `SELF_ASSESSMENT_REPORT.md`, and an English version of the proposal and reports.  
 Kept: the table layout and evidence lines, the *What we did not manage* section, and `PROPOSAL-en.md` as an English translation of `PROPOSAL.md`.  
-Changed: the scores it drafted for criteria 1, 2 and 5. We judged our own work higher than it did.  
