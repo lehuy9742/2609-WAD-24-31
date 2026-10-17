@@ -2,10 +2,10 @@
 
 ## 1. Team
 
-| STT | Họ và tên         | MSSV      |
-| --- | ----------------- | --------- |
-| 1   | Lê Hoàng Hiếu     | 24120048  |
-| 2   | Lê Nguyễn Gia Huy | 24120061  |
+| STT | Họ và tên         | MSSV     |
+| --- | ----------------- | -------- |
+| 1   | Lê Hoàng Hiếu     | 24120048 |
+| 2   | Lê Nguyễn Gia Huy | 24120061 |
 | 3   | Nguyễn Anh Sang   | 24120131 |
 
 ## 2. The problem
@@ -33,24 +33,34 @@ Việc chính của người dùng: **tìm được một tin phù hợp và m�
 6. Bấm vào một tin để xem chi tiết: mô tả, yêu cầu, lịch làm, lương, và khung **Thông tin nguồn tin** (nguồn đăng, đường dẫn gốc, thời điểm kiểm tra gần nhất, những điểm cần tự kiểm tra). — *sang Màn hình 3*
 7. Bấm **"Ứng tuyển tại nguồn"** để sang website nguồn, xác nhận tin còn tuyển và ứng tuyển tại đó.
 
+Toàn bộ luồng trên không cần đăng nhập. Sinh viên có tài khoản có thể bấm **"Lưu việc"** ở Màn hình 2 hoặc 3 để xem lại tin đó sau trong **"Việc đã lưu"**.
+
 ## 5. Scope
 
 ### Sẽ làm
 
-- Giao diện web dùng được trên máy tính và điện thoại, chỉ tập trung vào việc làm thêm và thực tập.
+- Giao diện web dùng được trên máy tính và điện thoại, tập trung vào việc làm thêm và thực tập (có thêm lựa chọn "Toàn thời gian" cho sinh viên năm cuối).
 - Tìm kiếm theo từ khóa và thành phố, cùng các bộ lọc cơ bản: loại công việc, địa điểm, mức lương, kinh nghiệm.
-- Lưu danh sách công việc trong cơ sở dữ liệu với cấu trúc thống nhất.
+- Tin tuyển dụng lấy từ những trang nguồn cho phép trong `robots.txt` của họ, cộng với tin nhóm nhập tay; tất cả lưu trong cơ sở dữ liệu với cấu trúc thống nhất.
 - Trang chi tiết hiển thị tên nguồn, đường dẫn tin gốc và thời điểm hệ thống kiểm tra tin lần cuối.
 - Ghi rõ **"Nguồn không cung cấp"** khi một thông tin bị thiếu.
 - Xử lý cơ bản tin trùng hoặc tin có thể đã cũ, nếu nguồn dữ liệu cho phép.
 - Nút **"Ứng tuyển tại nguồn"** mở trang tuyển dụng gốc để xem thông tin mới nhất và ứng tuyển.
+- Tài khoản sinh viên đơn giản (email và mật khẩu), chỉ dùng cho các tính năng cá nhân bên dưới.
+- **Lưu việc** và trang **Việc đã lưu**.
+- **Hồ sơ ngắn:** ngành học và lịch có thể đi làm, dùng để chọn sẵn bộ lọc khi tìm việc.
+- **Thông báo trong trang** (biểu tượng chuông) khi một việc đã lưu thay đổi trạng thái hoặc sắp hết hạn nhận hồ sơ.
+- Nút **"Báo cáo tin tuyển dụng đáng ngờ"**: sinh viên gửi lý do, nhóm dùng báo cáo để kiểm tra lại nguồn.
+- Các trang nội dung tĩnh: hướng dẫn tìm việc an toàn, giới thiệu, trợ giúp, liên hệ, quyền riêng tư.
 
 ### Not building
 
 - **Không có tài khoản nhà tuyển dụng:** không đăng tin, không quản lý hồ sơ ứng viên.
 - **Không nhắn tin, không đặt lịch phỏng vấn** giữa ứng viên và nhà tuyển dụng.
-- **Không tự động nộp hồ sơ, không lưu CV** của người dùng.
-- **Không kết luận lừa đảo:** không tuyên bố một tin là lừa đảo hay chắc chắn hợp pháp.
+- **Không tự động nộp hồ sơ, không tải lên hay lưu CV:** khung "Hồ sơ sẵn sàng" chỉ nhắc sinh viên tự chuẩn bị CV.
+- **Không kết luận lừa đảo:** không tuyên bố một tin là lừa đảo hay chắc chắn hợp pháp; báo cáo của người dùng không tự gắn nhãn lên tin.
+- **Không gửi thông báo qua email hay SMS:** chỉ có thông báo trong trang.
+- **Không đăng nhập bằng Google/Facebook, không xác minh danh tính sinh viên.**
 - **Không dùng AI dự đoán khả năng được tuyển.**
 - **Không thu thập dữ liệu hàng loạt:** không cào dữ liệu từ nhiều website, không vượt qua đăng nhập, CAPTCHA, giới hạn truy cập hay cơ chế bảo vệ của nguồn.
 - **Không làm ứng dụng di động:** chỉ làm web chạy được trên điện thoại.
@@ -58,22 +68,22 @@ Việc chính của người dùng: **tìm được một tin phù hợp và m�
 
 ## 6. Screens
 
-Ba màn hình nằm trong thư mục [`wireframes/`](wireframes/), theo đúng thứ tự của main flow.
+Ba màn hình nằm trong thư mục [`wireframes/`](wireframes/), theo đúng thứ tự của main flow. Cả ba dùng chung thanh trên cùng: **Trang chủ** (về Màn hình 1), **Việc làm** (sang Màn hình 2), **Việc đã lưu**, chuông thông báo và menu tài khoản (hồ sơ, đăng xuất). Chân trang dẫn tới các trang nội dung tĩnh. Dải "Dữ liệu minh họa" chỉ để đánh dấu dữ liệu giả trong bản mẫu, không có trên trang thật.
 
 ### Màn hình 1 — Tìm kiếm và lọc
 
 [`wireframes/01 - Job Search.png`](wireframes/01%20-%20Job%20Search.png)
 
-Đây là màn hình đầu tiên khi sinh viên mở CampusJob Trust. Sinh viên đang muốn khoanh vùng loại việc mình cần: nhập từ khóa (tên công việc hoặc tên công ty), chọn thành phố, rồi bấm các nhóm lọc loại công việc, địa điểm, mức lương hoặc một nhu cầu phổ biến như "Không yêu cầu kinh nghiệm", "Ca linh hoạt". Phía dưới có mục **Công việc nổi bật** để xem nhanh vài tin; chân trang nhắc "kiểm tra nguồn trước khi ứng tuyển". Bấm **"Tìm việc"** (hoặc **"Xem tất cả"**) sẽ sang Màn hình 2; bấm thẳng vào một thẻ công việc nổi bật sẽ sang Màn hình 3 của tin đó.
+Đây là màn hình đầu tiên khi sinh viên mở CampusJob Trust. Sinh viên đang muốn khoanh vùng loại việc mình cần: nhập từ khóa (tên công việc hoặc tên công ty), chọn thành phố, rồi bấm các nhóm lọc loại công việc (làm thêm, thực tập, toàn thời gian), địa điểm (kể cả Remote), mức lương, hoặc một nhu cầu phổ biến như "Không yêu cầu kinh nghiệm", "Ca linh hoạt". Phía dưới có mục **Công việc nổi bật** để xem nhanh vài tin; chân trang nhắc "kiểm tra nguồn trước khi ứng tuyển". Bấm **"Tìm việc"** (hoặc **"Xem tất cả"**) sẽ sang Màn hình 2; bấm vào một thẻ công việc nổi bật (hoặc mũi tên trên thẻ) sẽ sang thẳng Màn hình 3 của tin đó.
 
 ### Màn hình 2 — Kết quả tìm kiếm
 
 [`wireframes/02 - Search Results.png`](wireframes/02%20-%20Search%20Results.png)
 
-Sinh viên đang so sánh các tin khớp với điều kiện vừa chọn để quyết định nên xem kỹ tin nào. Mỗi thẻ cho thấy chức danh, công ty, loại công việc, địa điểm, mức lương, ngày đăng và trạng thái **"Chưa xác minh độc lập"**, để sinh viên không mặc định tin nào cũng đáng tin. Nếu kết quả chưa hợp, sinh viên đổi từ khóa hoặc thanh bộ lọc ngay trên đầu trang (loại công việc, địa điểm, mức lương, kinh nghiệm), đổi sắp xếp, hoặc chuyển trang. Khung **Tìm việc an toàn** bên phải nhắc những điều cần cẩn thận khi ứng tuyển. Bấm vào một thẻ sẽ sang Màn hình 3 của tin đó.
+Sinh viên đang so sánh các tin khớp với điều kiện vừa chọn để quyết định nên xem kỹ tin nào. Mỗi thẻ cho thấy chức danh, công ty, loại công việc, địa điểm, mức lương, ngày đăng và trạng thái **"Chưa xác minh độc lập"**, để sinh viên không mặc định tin nào cũng đáng tin. Nếu kết quả chưa hợp, sinh viên đổi từ khóa rồi bấm **"Tìm kiếm"**, chỉnh thanh bộ lọc (loại công việc, địa điểm, mức lương, kinh nghiệm), đổi sắp xếp, hoặc chuyển trang. Nút **"Lưu việc"** trên mỗi thẻ thêm tin vào Việc đã lưu (cần đăng nhập). Bên phải, khung **Hồ sơ sẵn sàng** dẫn tới trang hồ sơ qua **"Hoàn thiện hồ sơ"** (điền ngành học và lịch có thể làm; việc cập nhật CV chỉ là lời nhắc), còn khung **Tìm việc an toàn** dẫn tới trang hướng dẫn qua **"Xem hướng dẫn an toàn"**. Bấm vào một thẻ sẽ sang Màn hình 3 của tin đó.
 
 ### Màn hình 3 — Chi tiết công việc và kiểm tra nguồn
 
 [`wireframes/03 - Job Details & Source Trust.png`](wireframes/03%20-%20Job%20Details%20&%20Source%20Trust.png)
 
-Sinh viên đang quyết định có nên ứng tuyển tin này hay không. Bên trái là mô tả công việc, yêu cầu ứng viên, lịch làm và địa điểm, lương và quyền lợi theo tin đăng. Bên phải là khung **Thông tin nguồn tin**: tên nguồn đăng, đường dẫn tin gốc, thời điểm kiểm tra gần nhất và trạng thái cập nhật, cùng mục **Dấu hiệu cần kiểm tra** liệt kê những gì tin chưa nêu (ví dụ "Tin chưa nêu hợp đồng, kỳ trả lương hoặc người phụ trách tuyển dụng") và lời nhắc trung lập "Trước khi ứng tuyển". Bấm **"Ứng tuyển tại nguồn"** sẽ mở website gốc để xem thông tin mới nhất và nộp hồ sơ ở đó; bấm **"← Kết quả tìm kiếm"** để quay lại Màn hình 2 xem tin khác.
+Sinh viên đang quyết định có nên ứng tuyển tin này hay không. Bên trái là mô tả công việc, yêu cầu ứng viên, lịch làm và địa điểm, lương và quyền lợi theo tin đăng. Bên phải là khung **Thông tin nguồn tin**: tên nguồn đăng, đường dẫn tin gốc, thời điểm kiểm tra gần nhất và trạng thái cập nhật, cùng mục **Dấu hiệu cần kiểm tra** liệt kê những gì tin chưa nêu (ví dụ "Tin chưa nêu hợp đồng, kỳ trả lương hoặc người phụ trách tuyển dụng") và lời nhắc trung lập "Trước khi ứng tuyển". Bấm **"Ứng tuyển tại nguồn"** hoặc đường dẫn nguồn sẽ mở website gốc để xem thông tin mới nhất và nộp hồ sơ ở đó. **"Lưu việc làm"** thêm tin vào Việc đã lưu; **"Báo cáo tin tuyển dụng đáng ngờ"** mở một ô nhập lý do ngay trên trang này. Bấm **"← Kết quả tìm kiếm"** để quay lại Màn hình 2 xem tin khác.
